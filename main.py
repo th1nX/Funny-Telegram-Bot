@@ -41,7 +41,7 @@ async def main():
         async def start(event):
             user_id = event.sender_id
             if user_id in allowed_tgids:
-                print(user_id)
+                print(user_id + " used /start command")
                 await event.reply(
                 """
 Бот: 
@@ -70,14 +70,17 @@ async def main():
             if user_id in allowed_tgids:
                 await reload_chats()
                 await event.reply('Бот: Чаты перезагружены!')
+                print('\nChats were reloaded.')
 
         @client.on(events.NewMessage(pattern='/mailing'))
         async def mailing(event):
             user_id = event.sender_id
+            print('\nStart mailing...')
             if user_id in allowed_tgids:
                 for id in db.get_all_id():
                     await client.send_message(id, db.get_text(0))
                 await event.reply('Бот: Рассылка завершена!')
+                print('\nMailing was completed!')
 
         @client.on(events.NewMessage(pattern='/update'))
         async def update(event):
@@ -91,6 +94,7 @@ async def main():
 Ваш текущий текст для рассылки:
 {text}            
             """)
+                print('\nText for mailing was updated!')
 
         @client.on(events.NewMessage(pattern='/supd'))
         async def update(event):
@@ -104,6 +108,7 @@ async def main():
 Ваш текущий текст для спама:
 {spam_text}            
                 """)
+                print('\nText for spamming was updated!')
 
         @client.on(events.NewMessage(pattern='/spam'))
         async def spam(event):
@@ -111,16 +116,22 @@ async def main():
             if user_id in allowed_tgids:
                 victim_id = int(event.raw_text.split()[1])
                 counter = int(event.raw_text.split()[2])
+                print(f'\nStart spamming [{counter}] times to {victim_id} ...')
                 for i in range(counter):
                     await client.send_message(victim_id, db.get_text(1))
+                await client.send_message(user_id, f"Бот: Спам пользователю {victim_id} закончен.")
+                print('\nSpamming was completed!')
 
         @client.on(events.NewMessage(pattern='/create'))
         async def create(event):
             user_id = event.sender_id
             if user_id in allowed_tgids:
+                print('\nDatabase was created!')
                 await db.create_db()
 
+        print(f"{'-'*40}\nBot was started!\n{'-'*40}")
         await client.run_until_disconnected()
 
 
 asyncio.run(main())
+
