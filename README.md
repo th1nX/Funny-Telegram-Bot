@@ -20,7 +20,8 @@ ____
 ### First step:
 - Read [this](https://core.telegram.org/api/obtaining_api_id) manual for getting client API_ID and API_HASH
 ### Second step:
-- Download the project to new folder
+- Download the project to new folder:  
+```git clone https://github.com/th1nX/Funny-Telegram-Bot```
 - Create .env file and and fill in these lines:  
 ```
 API_ID = WRITE_YOUR_API_ID_INSTEAD
