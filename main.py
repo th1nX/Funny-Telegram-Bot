@@ -41,7 +41,7 @@ async def main():
         async def start(event):
             user_id = event.sender_id
             if user_id in allowed_tgids:
-                print(user_id + " used /start command")
+                print(f"{user_id} used /start command")
                 await event.reply(
                 """
 Бот: 
