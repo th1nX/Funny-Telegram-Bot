@@ -3,7 +3,7 @@
 ### ⚙️ Features:
 - Log in to the TG account
 - Spamming to users by TG Id
-- Editing text for spam
+- Editing text for spamming
 - Mailing to chats by chat TG Id
 - Editing text for mailing
 
