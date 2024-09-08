@@ -28,10 +28,12 @@ API_HASH = WRITE_YOUR_API_HASH_INSTEAD
 PHONE_NUMBER = WRITE_ACCOUNT_PHONE_NUMBER_INSTEAD
 ALLOWED_TGIDS = [AllowedTgId1, AllowedTgId2, etc...]
 
-P.S: You have to add your main telegram id if you want to use this bot by another Telegram account
+P.S: You have to add your main telegram id if you want to use this bot by another Telegram account.
+P.S 2: You can get Telegram ID in this bot: @username_to_id_bot
 ```
 ### Third step:
 - Activate the start.bat to install requirements and run the bot
 - Write bot's account phone number to terminal
+- Write security code from bot's account to terminal
 - Write /start command to bot's account or if you logged into bot's account just write /start command to favourites
 - Enjoy.
