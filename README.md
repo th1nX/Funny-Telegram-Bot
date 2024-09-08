@@ -22,7 +22,7 @@ ____
 ### Second step:
 - Download the project to new folder:  
 ```git clone https://github.com/th1nX/Funny-Telegram-Bot```
-- Create .env file and and fill in these lines:  
+- Create .env file by activating start.bat first time and edit these lines:  
 ```
 API_ID = WRITE_YOUR_API_ID_INSTEAD
 API_HASH = WRITE_YOUR_API_HASH_INSTEAD
