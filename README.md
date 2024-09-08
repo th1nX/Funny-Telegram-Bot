@@ -32,5 +32,6 @@ P.S: You have to add your main telegram id if you want to use this bot by anothe
 ```
 ### Third step:
 - Activate the start.bat to install requirements and run the bot
+- Write bot's account phone number to terminal
 - Write /start command to bot's account or if you logged into bot's account just write /start command to favourites
 - Enjoy.
